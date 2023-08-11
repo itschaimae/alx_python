@@ -1,1 +1,3 @@
-Commande ECHO activ‚e.
+def raise_exception():
+    raise TypeError("This is a type exception")
+
