@@ -1,1 +1,3 @@
- 5-print_comb2.py  6-print_comb3.py
+for num in range(99):
+    print("{} = 0x{:x}".format(num, num))
+
