@@ -20,6 +20,12 @@ Classes:
 """
 
 class Square:
+    """Classes:
+    Square:
+        This class provides a basic representation of a square with an attribute for its side length.
+
+        Attributes:
+            __size (int): The size of the square's sides."""
     def __init__(self, size=0):
         """
         Initializes a new Square instance with a given size.
