@@ -6,15 +6,21 @@ This module defines a class, Square, that represents a square with a private siz
 Classes:
     Square:
         This class provides a basic representation of a square with an attribute for its side length.
+
+        Methods:
+            __init__(self, size):
+                Initializes a new Square instance with a given size.
+
 """
 
 class Square:
     def __init__(self, size):
         """
-        Initializes a new Square instance.
+        Initializes a new Square instance with a given size.
 
         Args:
             size: The size of the square's sides.
         """
         self.__size = size
+
 
