@@ -1,4 +1,7 @@
-# 8-square.py
+"""
+Module: 8-square
+This module defines classes for geometry, specifically Rectangle and Square.
+"""
 
 class BaseGeometry:
     """
