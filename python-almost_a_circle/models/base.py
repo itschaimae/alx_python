@@ -7,6 +7,8 @@ This module defines the Square class, which represents a square shape.
 Classes:
     Square: A class for representing a square shape.
 """
+from models.rectangle import Rectangle
+
 
 class Square:
     """
