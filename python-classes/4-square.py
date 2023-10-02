@@ -17,6 +17,9 @@ Classes:
             area(self):
                 Calculate and return the area of the square.
 
+            my_print(self):
+                Print a graphical representation of the square using "#" characters.
+
         Raises:
             TypeError: If the provided size is not an integer.
             ValueError: If the provided size is less than 0.
@@ -25,10 +28,7 @@ Classes:
 class Square:
     """Classes:
     Square:
-        This class provides a basic representation of a square with an attribute for its side length.
-
-        Attributes:
-            __size (int): The size of the square's sides."""
+        This class provides a basic representation of a square with an attribute for its side length."""
     def __init__(self, size=0):
         """
         Initializes a new Square instance with a given size.
@@ -55,7 +55,18 @@ class Square:
             int: The area of the square.
         """
         return self.__size ** 2
+    
+    def my_print(self):
+        """
+        Print a graphical representation of the square using "#" characters.
+        If the size is 0, it prints an empty line.
 
+        Example:
+            For a square with size 3, it prints:
+            ###
+            ###
+            ###
+        """
         if self.__size == 0:
             print()
             return
