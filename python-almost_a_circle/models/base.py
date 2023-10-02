@@ -1,50 +1,59 @@
 
 """
-models.base
-============
+Module: square
 
-This module defines the Base class, which serves as the foundation for managing ID attributes in other classes.
+This module defines the Square class, which represents a square shape.
 
 Classes:
-    - Base: The Base class for managing IDs.
-
-Module Attributes:
-    - __all__ (List[str]): A list of module names that should be imported when using "from models.base import *".
-
+    Square: A class for representing a square shape.
 """
 
-__all__ = ['Base']
-
-class Base:
+class Square:
     """
-    The Base class serves as the foundation for managing ID attributes in other classes.
+    Square class represents a square shape.
 
     Attributes:
-        __nb_objects (int): A private class attribute used to generate unique IDs.
-
-    Args:
-        id (int, optional): An integer representing the ID. If provided, the instance is assigned the given ID.
-            If not provided, a new ID is generated automatically.
-
-    Attributes:
-        id (int): A public instance attribute representing the ID of the instance.
+        __size (int): The size of the square.
 
     Methods:
-        __init__(self, id=None): Constructor method for creating a new Base instance.
+        __init__(self, size): Initializes a new Square instance with the given size.
+        size (property): Gets the size of the square.
+        size (setter): Sets the size of the square, raising TypeError and ValueError if invalid values are provided.
     """
 
-    __nb_objects = 0
-
-    def __init__(self, id=None):
+    def __init__(self, size):
         """
-        Initialize a new Base instance.
+        Initializes a new Square instance with the given size.
 
         Args:
-            id (int, optional): An integer representing the ID. If provided, the instance is assigned the given ID.
-                If not provided, a new ID is generated automatically.
+            size (int): The size of the square.
         """
-        if id is not None:
-            self.id = id
-        else:
-            Base.__nb_objects += 1
-            self.id = Base.__nb_objects
+        self.__size = size
+
+    @property
+    def size(self):
+        """
+        Gets the size of the square.
+
+        Returns:
+            int: The size of the square.
+        """
+        return self.__size
+
+    @size.setter
+    def size(self, value):
+        """
+        Sets the size of the square and raises TypeError and ValueError if invalid values are provided.
+
+        Args:
+            value (int): The new size to set.
+
+        Raises:
+            TypeError: If the provided value is not an integer.
+            ValueError: If the provided value is less than or equal to 0.
+        """
+        if not isinstance(value, int):
+            raise TypeError("size must be an integer")
+        if value <= 0:
+            raise ValueError("size must be > 0")
+        self.__size = value
