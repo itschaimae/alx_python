@@ -14,6 +14,8 @@ Classes:
 """
 
 class Square:
+    """Square:
+        This class provides a basic representation of a square with an attribute for its side length."""
     def __init__(self, size):
         """
         Initializes a new Square instance with a given size.
